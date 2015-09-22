@@ -40,6 +40,12 @@ Image source: http://www.thingiverse.com/thing:835828/#files
 
 ![](images/prusia-i3.jpg "Prusia i3 and Arduino")
 
+<!--
+
+Hardware info for Arduino Prusia
+
+-->
+
 # STL
 
 ~~~~ {.shell}
@@ -120,19 +126,20 @@ TODO: Show Adapter log output
 
 <!--
 TODO:
-- Data
-- Object
-- G-code
+- Data  (temperature values)
+- Object (Demo: Blender rendition of model)
+- G-code (Demo: Blender)
 -->
 
 # Credits
 
-- Pronterface
-    - "kliment"
+- irc.freenode.net
+    - \#reprap
+        - "kliment"
 
-- \#blenderpython (irc.freenode.net)
-    - "ideasman42"
-    - "lukas_t"
+    - \#blenderpython
+        - "ideasman42"
+        - "lukas_t"
 <!--
 TODO: Add blenderpython helper, real names!
 -->
