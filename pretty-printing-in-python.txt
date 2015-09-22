@@ -2,6 +2,12 @@
 % Shakthi Kannan
 % Version 0.1 &nbsp;&nbsp;&nbsp;&nbsp; GNU FDL
 
+<!--
+
+TODO: Change theme
+
+-->
+
 # Outline
 
 - Motivation
