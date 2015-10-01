@@ -1,10 +1,10 @@
 % Pretty Printing in Python
 % Shakthi Kannan
-% Version 0.1 &nbsp;&nbsp;&nbsp;&nbsp; GNU FDL
+% Version 1.0 &nbsp;&nbsp;&nbsp;&nbsp; GNU FDL
 
 # Motivation
 
-![](images/Superman_preview_featured.jpg "S logo")
+![](images/batman-vs-superman-hd-wallpaper.jpg "Batman superman logo")
 
 <!--
 - Art to Part
@@ -23,12 +23,12 @@ Image source: http://www.thingiverse.com/thing:835828/#files
 # STL (...)
 
 ~~~~ {.shell}
-solid ascii
-  facet normal 6.997576e+000 -7.143803e+000 0.000000e+000
+solid
+  facet normal 6.695774E-01 -7.427424E-01 0.000000E+00
     outer loop
-      vertex   2.278649e+000 2.495392e+001 1.950000e+000
-      vertex   2.278649e+000 2.495392e+001 8.587718e-001
-      vertex   6.211083e+000 2.880586e+001 1.950000e+000
+      vertex 4.000113E+01 2.540189E+01 -3.106850E-03
+      vertex 4.976952E+01 3.420804E+01 -3.108599E-03
+      vertex 4.000113E+01 2.540189E+01 1.121893E+00
     endloop
   endfacet
   ...
@@ -43,10 +43,12 @@ endsolid
 
 ![](images/prusa-i3-with-laptop.png "Prusia i3 with laptop")
 
-<!-- Describe hardware
-- Prusa i3
-- Arduino
-- Image sensors
+<!--
+- Prusa i3, Mendel RepRap
+- Arduino Mega 2560
+- Ultrasonic sensors
+- PLA
+- Fused Deposition Modelling
 -->
 
 # G-code
@@ -56,25 +58,29 @@ endsolid
 # G-code (...)
 
 ~~~~ {.shell}
-G90
-G21
-M103
-M105
-M106
-M140 S60.0
-M141 S30.0
-M142 S0.0
-M113 S1.0
-M108 S210.0
-M104 S200.0
-G1 X-34.56 Y11.448 Z0.72 F60.0
-M101
-G1 X-34.56 Y15.912 Z0.72 F240.0
+G90              ; Set to absolute positioning
+G21              ; Set units to millimeters
+M103             ; Extruder off
+M105             ; Get extruder temperature
+M106             ; Fan on
+M140 S60.0       ; Set bed temperature
+M141 S30.0       ; Set chamber temperature
+M142 S0.0        ; Holding pressure
+M113 S1.0        ; Set extruder PWM
+M108 S210.0      ; Set extruder speed
+M104 S200.0      ; Set extruder temperature
+G1 X-2.88 Y34.488 Z0.72 F60.0  ; Move
+M101                           ; Extruder on
+G1 X-2.88 Y34.632 Z0.72 F240.0 ; Move
 ~~~~
 
 # Printrun
 
 ![](images/pronterface.png "Pronterface")
+
+<!--
+TODO: Best practices
+-->
 
 # 3D Printer
 
@@ -83,7 +89,6 @@ G1 X-34.56 Y15.912 Z0.72 F240.0
 <!--
 Demo: Pronsole
       Set bed, extruder temperature
-      Homing video
 -->
 
 # Homing
@@ -94,13 +99,20 @@ Demo: Pronsole
 
 ![](images/4-mqtt.png "MQTT")
 
-# MTConnect
+# MQTT (...)
 
-![](images/mtconnect.png "MTConnect")
+![](images/mqtt-pub-sub.png "MQTT Architecture")
 
 <!--
-Source: http://www.mmsonline.com/articles/understanding-mtconnect-agents-and-adapters
+Formerly MQ Telemetry Transport (IBM MQ message queue product line)
+Light-weight
+M2M
+v3.1.1
 -->
+
+# MTConnect (...)
+
+![](images/mtconnect-design.png "MTConnect Architecture")
 
 # MQTT Topics
 
@@ -131,36 +143,42 @@ TS|Yabs|42.234
 TS|Zabs|78.11
 ~~~~
 
+<!--
+TODO: Replace TS
+-->
+
 # MTConnect Agent
 
 ![](images/5b-agent.png "MTConnect Agent")
 
 <!--
-Demo: agent XML
+Demo: Agent XML, agent.cfg and demo
 -->
 
 # Analytics
 
 ![](images/6-analytics.png "Analytics")
 
-# Client
+# Analytics (...)
 
-![](images/7-paho-client.png "Client")
+![](images/yagv.png "yagv")
 
 <!--
 Demo: YAGV
-Demo: Blender
-Demo: Paraview
-Demo: Blender STL from Source, Meshlab
+      Blender
 -->
 
-# MeshLab
+# MeshLab (WIP)
 
 ![](images/MeshLab.png "MeshLab")
 
-# pylatscan
+# pylatscan (WIP)
 
 ![](images/pylatscan.png "pylatscan")
+
+# Client
+
+![](images/7-paho-client.png "Client")
 
 # Credits
 
