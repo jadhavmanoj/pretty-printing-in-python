@@ -2,57 +2,25 @@
 % Shakthi Kannan
 % Version 0.1 &nbsp;&nbsp;&nbsp;&nbsp; GNU FDL
 
-<!--
-
-TODO: Change theme
-
--->
-
-# Outline
-
-- Motivation
-- Hardware
-- STL
-- Data Flow
-- Pronterface
-- Skeinforge
-- G-code
-- MTConnect
-- Visualization
-- Credits
-- Reference
-
 # Motivation
 
 ![](images/Superman_preview_featured.jpg "S logo")
 
 <!--
-TODO: Better image
-
 - Art to Part
-
 - Do It Yourself
-
 - Analytics
-
 - Python!
-
 - Free Libre and Open Source Software
-
+- State of affairs
 Image source: http://www.thingiverse.com/thing:835828/#files
 -->
 
-# Hardware
-
-![](images/prusia-i3.jpg "Prusia i3 and Arduino")
-
-<!--
-
-Hardware info for Arduino Prusia
-
--->
-
 # STL
+
+![](images/1-stl.png "1 - STL")
+
+# STL (...)
 
 ~~~~ {.shell}
 solid ascii
@@ -67,24 +35,25 @@ solid ascii
 endsolid
 ~~~~
 
-# Printrun
+# Hardware
 
-![](images/pronterface.png "Pronterface")
+![](images/Prusai3-metalframe.jpg "Prusia i3")
 
-<!--
+# Hardware (...)
 
-(Pronterface, Pronsole, and Printcore)
+![](images/prusa-i3-with-laptop.png "Prusia i3 with laptop")
 
-TODO: Add example for Printcore
-Demo: Pronsole
-
+<!-- Describe hardware
+- Prusa i3
+- Arduino
+- Image sensors
 -->
 
-# Skeinforge
-
-![](images/skeinforge.png "Skeinforge")
-
 # G-code
+
+![](images/2-gcode.png "G-code")
+
+# G-code (...)
 
 ~~~~ {.shell}
 G90
@@ -103,52 +72,102 @@ M101
 G1 X-34.56 Y15.912 Z0.72 F240.0
 ~~~~
 
+# Printrun
+
+![](images/pronterface.png "Pronterface")
+
+# 3D Printer
+
+![](images/3-printer.png "3D printer")
+
 <!--
-
-TODO: Manufacturing 101
-
+Demo: Pronsole
+      Set bed, extruder temperature
+      Homing video
 -->
+
+# Homing
+
+![](images/e-b-temp.png "Homing temperatures")
+
+# MQTT
+
+![](images/4-mqtt.png "MQTT")
 
 # MTConnect
 
 ![](images/mtconnect.png "MTConnect")
 
 <!--
-
 Source: http://www.mmsonline.com/articles/understanding-mtconnect-agents-and-adapters
-
-TODO: Better image
-TODO: Show Adapter log output
-
 -->
 
-# Data Flow
+# MQTT Topics
 
-![](images/mtconnect-mqtt.png "MTConnect-MQTT")
+- Devices/device/prusa-i3/DataItems/avail
 
-# Visualization
+- Devices/device/prusa-i3/Components/Sensor/sensor/DataItems/bed_temp
 
-![](images/yagv.png "YAGV")
+- Devices/device/prusa-i3/Components/Sensor/sensor/DataItems/extruder_temp
+
+- Devices/device/prusa-i3/Components/Axes/A/Components/Linear/X/DataItems/x_1
+
+- Devices/device/prusa-i3/Components/Axes/A/Components/Linear/Y/DataItems/y_1
+
+- Devices/device/prusa-i3/Components/Axes/A/Components/Linear/Z/DataItems/z_1
+
+# MQTT-MTConnect Adapter
+
+![](images/5a-adapter.png "MQTT-MTConnect Adapter")
+
+# Adapter SHDR format
+
+~~~~ {.shell}
+TS|avail|avail
+TS|bed_temp|152.45
+TS|extruder_temp|55.2
+TS|Xabs|39.567
+TS|Yabs|42.234
+TS|Zabs|78.11
+~~~~
+
+# MTConnect Agent
+
+![](images/5b-agent.png "MTConnect Agent")
 
 <!--
-TODO:
-- Data  (temperature values)
-- Object (Demo: Blender rendition of model)
-- G-code (Demo: Blender)
+Demo: agent XML
 -->
+
+# Analytics
+
+![](images/6-analytics.png "Analytics")
+
+# Client
+
+![](images/7-paho-client.png "Client")
+
+<!--
+Demo: YAGV
+Demo: Blender
+Demo: Paraview
+Demo: Blender STL from Source, Meshlab
+-->
+
+# MeshLab
+
+![](images/MeshLab.png "MeshLab")
+
+# pylatscan
+
+![](images/pylatscan.png "pylatscan")
 
 # Credits
 
 - irc.freenode.net
-    - \#reprap
-        - "kliment"
-
-    - \#blenderpython
-        - "ideasman42"
-        - "lukas_t"
-<!--
-TODO: Add blenderpython helper, real names!
--->
+    - "kliment"
+    - "ideasman42"
+    - "lukas_t"
 
 - IIT-M
     - Rohan Chavan
@@ -182,3 +201,14 @@ TODO: Add blenderpython helper, real names!
 
 - Blender. https://www.blender.org/
 
+# Summary
+
+![](images/7-paho-client.png "Client")
+
+# Pretty Print
+
+![](images/8-python-logo.png "Python logo")
+
+#
+
+@shakthimaan
