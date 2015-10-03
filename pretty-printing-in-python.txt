@@ -135,12 +135,12 @@ v3.1.1
 # Adapter SHDR format
 
 ~~~~ {.shell}
-TS|avail|avail
-TS|bed_temp|152.45
-TS|extruder_temp|55.2
-TS|Xabs|39.567
-TS|Yabs|42.234
-TS|Zabs|78.11
+2015-10-02T13:54:55.135437|avail|avail
+2015-10-02T13:54:55.226202|bed_temp|152.45
+2015-10-02T13:55:55.023842|extruder_temp|55.2
+2015-10-02T13:57:55.342712|Xabs|39.567
+2015-10-02T13:57:55.234248|Yabs|42.234
+2015-10-02T13:57:55.112873|Zabs|78.11
 ~~~~
 
 <!--
